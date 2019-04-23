@@ -6,7 +6,7 @@
 #The Games class. This is used to outline the Games Object. It has some basic attributes
 #Keeps the Games objects consistent and organised
 class Games
-
+attr_reader :genre
     #Potential Rating system to include??
     def initialize (name, genre, brief)
         @name = name
@@ -14,19 +14,10 @@ class Games
         @description = brief
     end
 
-    #Just using this string method to test the output
+    #A string method to organise the returned value into a neat response
     def to_s
         return " #{@name}, #{@genre}, #{@description}"
     end
-
-    # def genre_collection 
-    #     genre = ["Real Time Strategy", "Horror", "RPG", "Action", "Survival"]
-    #     puts "What Genre are you searching for?"
-    #     genre_search = gets.chomp.downcase
-    #     if genre_search == genre.include?
-    #     puts game_array == genre
-    #     end 
-    # end
 end
 
 #Welcome Message Method

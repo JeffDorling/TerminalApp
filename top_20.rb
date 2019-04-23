@@ -60,7 +60,7 @@ if userinput == "a"
     # pincode = 1234
     STDIN.getch
 
-#The 
+#The delete option for user input
     elsif userinput == "d"
         welcome_message
         puts "horror"
@@ -68,7 +68,11 @@ if userinput == "a"
        
     elsif userinput == "g"
         welcome_message
-        Games.genre_collection
+        # genre = ["Horror", "Real Time Strategy", "RPG", "Action", "Survival"]
+        puts "What Genre are you searching for?"
+        genre_search = gets.chomp.downcase
+        genre_results = game_array.select {|game| game.genre.downcase.include?(genre_search)}
+        puts genre_results
         STDIN.getch 
 
     elsif userinput == "r"
