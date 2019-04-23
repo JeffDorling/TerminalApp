@@ -58,12 +58,13 @@ if userinput == "a"
     # puts "Confirm your an admin"
     # puts "Please enter Pin Code"
     # pincode = 1234
+    puts "This will add a game"
     STDIN.getch
 
 #The delete option for user input
     elsif userinput == "d"
         welcome_message
-        puts "horror"
+        puts "This will delete a game"
         STDIN.getch
        
     elsif userinput == "g"
