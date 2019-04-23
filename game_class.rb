@@ -42,3 +42,4 @@ game17 = Games.new("Arma 3" , "Action" , "INSERT DESC HERE")
 game18 = Games.new("Squads" , "Action" , "INSERT DESC HERE")
 game19 = Games.new("Rust" , "Survival" , "INSERT DESC HERE")
 game20 = Games.new("Minecraft" , "Survival" , "INSERT DESC HERE")
+
