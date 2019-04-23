@@ -4,60 +4,59 @@
 
 #Getting the game class
 require_relative "game_class"
+require 'io/console'
 
-#Declared Variables and Methods 
+#Declared Variables 
 outline = "="
 question = "What would you like to do?"
 
-#Welcome Message
-def welcome_message
-    outline = "="
-    welcome = "Jhye and Jeff's Fantastic Game Recommendations"
-    puts"\e[2J\e[f"
-    puts""
-    puts outline * welcome.length
-    puts welcome
-    puts outline * welcome.length
-end
+
 #The Header Print. This Will be the Greeting message. It will also prompt entry into application
 welcome_message
 puts "Press
-(e) to Enter
-(q) to Quit at Anytime"
+(e) to Enter"
+enterinput = gets.chomp
 
-userinput = gets.chomp
-
-if userinput == "e"
+loop do
+if enterinput == "e"
    welcome_message
-   puts question
+   puts question  
 end
 
 userinput = gets.chomp
 
 if userinput == "a"
     welcome_message
-  puts "games"
+    puts "action"
+    STDIN.getch
  
     elsif userinput == "h"
         welcome_message
-        puts "games"
+        puts "horror"
+        STDIN.getch
        
     elsif userinput == "s"
         welcome_message
-        puts "games" 
+        puts "survival"
+        STDIN.getch 
 
     elsif userinput == "w"
         welcome_message
-        puts "games"
+        puts "war"
+        STDIN.getch
 
     elsif userinput == "o"
         welcome_message
-        puts "games"
-        
-    else userinput == "q"
-        exit
-    end   
+        puts "open world"
+        STDIN.getch
 
+    else userinput == "q"
+        welcome_message
+        puts "Thanks for coming. See you next time"
+        STDIN.getch
+        break
+    end   
+end
 
 
 

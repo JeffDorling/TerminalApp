@@ -21,7 +21,7 @@ class Games
 end
 
 
-#Grab the Genre Class and make that a choice between the Genres we have on offer. Make that a limited choice. 
+#Our List of 20 Games 
 game1 = Games.new("Battlezone 1998", "Real Time Strategy", "A cold war themed battle in space")
 game2 = Games.new("Dead Space", "Horror", "Repair mission in space that goes horribly wrong")
 game3 = Games.new("Mass Effect 2", "RPG", "Recruit a Crew to embark on a suicide mission")
@@ -43,3 +43,12 @@ game18 = Games.new("Squads" , "Action" , "INSERT DESC HERE")
 game19 = Games.new("Rust" , "Survival" , "INSERT DESC HERE")
 game20 = Games.new("Minecraft" , "Survival" , "INSERT DESC HERE")
 
+#Welcome Message Method
+def welcome_message
+    outline = "="
+    welcome = "Jhye and Jeff's Fantastic Game Recommendations"
+    puts"\e[2J\e[f"
+    puts outline * welcome.length
+    puts welcome
+    puts outline * welcome.length
+end
