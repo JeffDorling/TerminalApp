@@ -41,7 +41,7 @@ game10, game11, game12, game13, game14, game15, game16, game17, game18, game19, 
 welcome_message
 puts "Press
 (e) to Enter"
-enterinput = gets.chomp
+enterinput = gets.chomp.downcase
 
 loop do
 if enterinput == "e"
@@ -50,16 +50,18 @@ if enterinput == "e"
    puts options  
 end
 
-userinput = gets.chomp
+userinput = gets.chomp.downcase
 
+#The add option user input
 if userinput == "a"
     welcome_message
     # puts "Confirm your an admin"
     # puts "Please enter Pin Code"
     # pincode = 1234
     STDIN.getch
- 
-    elsif userinput == "h"
+
+#The 
+    elsif userinput == "d"
         welcome_message
         puts "horror"
         STDIN.getch

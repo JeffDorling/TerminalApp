@@ -33,7 +33,7 @@ end
 #List of Options Method
 def options
     puts "(a) to add a game"
-    puts "(r) to remove a game"
+    puts "(d) to delete a game"
     puts "(g) to select list of games by genre"
     puts "(r) for a random game suggestion"
     puts "(q) to quit"
