@@ -1,4 +1,4 @@
-#Top 20 Recommendation App
+#Top 20 Game Recommendation App
 #Created by Jhye O'meley & Jeff Dorling
 #23/4/2019
 

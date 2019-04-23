@@ -1,4 +1,4 @@
-#Top 20 Recommendation App
+#Top 20 Game Recommendation App
 #Created by Jhye O'meley & Jeff Dorling
 #23/4/2019
 
@@ -74,6 +74,7 @@ if userinput == "a"
         genre_results = game_array.select {|game| game.genre.downcase.include?(genre_search)}
         puts genre_results
         STDIN.getch 
+        
 
     elsif userinput == "r"
         welcome_message
