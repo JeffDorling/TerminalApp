@@ -18,6 +18,15 @@ class Games
     def to_s
         return " #{@name}, #{@genre}, #{@description}"
     end
+
+    # def genre_collection 
+    #     genre = ["Real Time Strategy", "Horror", "RPG", "Action", "Survival"]
+    #     puts "What Genre are you searching for?"
+    #     genre_search = gets.chomp.downcase
+    #     if genre_search == genre.include?
+    #     puts game_array == genre
+    #     end 
+    # end
 end
 
 #Welcome Message Method
@@ -38,3 +47,5 @@ def options
     puts "(r) for a random game suggestion"
     puts "(q) to quit"
 end
+
+

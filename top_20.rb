@@ -10,6 +10,7 @@ require 'io/console'
 outline = "="
 question = "What would you like to do?"
 game_array = []
+
 #Our List of 20 Games 
 game1 = Games.new("Battlezone 1998", "Real Time Strategy", "A cold war themed battle in space")
 game2 = Games.new("Dead Space", "Horror", "Repair mission in space that goes horribly wrong")
@@ -35,7 +36,6 @@ game20 = Games.new("Minecraft" , "Survival" , "INSERT DESC HERE")
 #Populating the array
 game_array.push(game1, game2, game3, game4, game5, game6, game7, game8, game9, 
 game10, game11, game12, game13, game14, game15, game16, game17, game18, game19, game20)
-
 
 #The Header Print. This Will be the Greeting message. It will also prompt entry into application
 welcome_message
@@ -66,20 +66,10 @@ if userinput == "a"
         puts "horror"
         STDIN.getch
        
-    elsif userinput == "s"
+    elsif userinput == "g"
         welcome_message
-        puts "survival"
+        Games.genre_collection
         STDIN.getch 
-
-    elsif userinput == "w"
-        welcome_message
-        puts "war"
-        STDIN.getch
-
-    elsif userinput == "o"
-        welcome_message
-        puts "open world"
-        STDIN.getch
 
     elsif userinput == "r"
         welcome_message
