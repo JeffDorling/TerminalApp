@@ -32,6 +32,17 @@ The functionality includes:-
 ![alt text](docs\random_recommend.jpg)
 - Show the full list of recommendations
 ![alt text](docs\full_list.jpg)
+
+Future Enhancements
+Access Concerns
+Legal Ethical issues culture safety
+social political racial issues
+
+
+Description of Design and Planning Process
+Evidence of Brainstorming
+App Diagram
+Project Plan and Timeline
  
 
 
