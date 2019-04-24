@@ -23,16 +23,16 @@ game7 = Games.new("Half Life 2", "Action", "Follow Gordon Freeman's fight to sav
 game8 = Games.new("Fallout New Vegas", "RPG", "Find the guy that shot you in the head. Shoot him back")
 game9 = Games.new("Elder Scrolls V Skyrim", "RPG", "As the Dragonborn, kill other dragons")
 game10 = Games.new("The Witcher 3", "RPG", "Stop the Wild Hunt, Play GWENT")
-game11 = Games.new("Call of Duty: Black Ops" , "Action" , "INSERT DESC HERE")
-game12 = Games.new("Call of Duty: Black Ops 2" , "Action" , "INSERT DESC HERE")
-game13 = Games.new("Call of Duty: World at War" , "Action" , "INSERT DESC HERE")
-game14 = Games.new("Outlast" , "Horror" , "INSERT DESC HERE")
-game15 = Games.new("Outlast 2" , "Horror" , "INSERT DESC HERE")
-game16 = Games.new("The Evil Within 2" , "Horror" , "INSERT DESC HERE")
-game17 = Games.new("Arma 3" , "Action" , "INSERT DESC HERE")
-game18 = Games.new("Squads" , "Action" , "INSERT DESC HERE")
-game19 = Games.new("Rust" , "Survival" , "INSERT DESC HERE")
-game20 = Games.new("Minecraft" , "Survival" , "INSERT DESC HERE")
+game11 = Games.new("Call of Duty: Black Ops" , "Action" , "Call of Duty: Black Ops I is a first-person shooter")
+game12 = Games.new("Call of Duty: Black Ops 2" , "Action" , "Call of Duty: Black Ops II is a first-person shooter")
+game13 = Games.new("Call of Duty: World at War" , "Action" , "Call of Duty: World at War is a first-person shooter video game")
+game14 = Games.new("Outlast" , "Horror" , "Outlast is a first-person survival horror video game")
+game15 = Games.new("Outlast 2" , "Horror" , "Outlast 2 is a first-person survival horror video game")
+game16 = Games.new("The Evil Within 2" , "Horror" , "The Evil Within 2 is a third-person survival horror video game")
+game17 = Games.new("Arma 3" , "Action" , "ARMA 3 is an open-world, realism-based, military tactical shooter")
+game18 = Games.new("Squads" , "Action" , "Squad is a tactical first-person shooter video game")
+game19 = Games.new("Rust" , "Survival" , "A open world pvp survival game ")
+game20 = Games.new("Minecraft" , "Survival" , "A open world sandbox")
 
 #Populating the array
 game_array.push(game1, game2, game3, game4, game5, game6, game7, game8, game9, 
@@ -57,9 +57,10 @@ userinput = gets.chomp.downcase
 if userinput == "a"
     welcome_message
     if admin == true
-        game_array.push(game_add)
-    end
+        game_array.push(game_add)      
         STDIN.getch
+    end
+        
 
 #The delete option for user input
     elsif userinput == "d"
@@ -70,8 +71,9 @@ if userinput == "a"
             delete_result = game_array.select {|game| game.name.downcase.include?(game_delete)}
             puts "You deleted #{delete_result.to_s}?"
             game_array.delete(delete_result.first)
+            STDIN.getch
         end
-        STDIN.getch
+        
 #The Genre search function, requiring user input to search for games via genre       
     elsif userinput == "g"
         welcome_message
