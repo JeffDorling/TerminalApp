@@ -63,9 +63,12 @@ if userinput == "a"
 #The delete option for user input
     elsif userinput == "d"
         welcome_message
-        admin
         if admin == true
-            game_delete
+            puts "What are you going to delete"
+            game_delete = gets.chomp.downcase
+            delete_result = game_array.select {|game| game.name.downcase.include?(game_delete)}
+            puts "You deleted #{delete_result}?"
+            game_array.delete(delete_result) 
         end
         STDIN.getch
        
@@ -81,6 +84,12 @@ if userinput == "a"
     elsif userinput == "r"
         welcome_message
         puts "We recommend #{game_array.sample}"
+        STDIN.getch
+
+    elsif userinput == "f"
+        welcome_message
+        puts "Our List "
+        puts game_array
         STDIN.getch
 
     else userinput == "q"

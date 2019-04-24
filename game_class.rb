@@ -8,7 +8,7 @@
 # require_relative "top_20"
 
 class Games
-attr_reader :genre
+attr_reader :genre, :name
     #Potential Rating system to include??
     def initialize (name, genre, brief)
         @name = name
@@ -38,6 +38,7 @@ def options
     puts "(d) to delete a game"
     puts "(g) to select list of games by genre"
     puts "(r) for a random game suggestion"
+    puts "(f) for our full list of games"
     puts "(q) to quit"
 end
 
@@ -55,14 +56,20 @@ def admin
         true: false
 end
 
-#Game add 
+#Add a game to the current list function  
 def game_add
+    #Get the name of the Game
     puts "What was the name of the Game?"
     name = gets.chomp.capitalize
+    #Put this game in a genre to search for
     puts "What genre does the game belong too?"
     genre = gets.chomp.capitalize
+    #A quick brief to sell the game
     puts "Write a quick brief of the game"
     brief = gets.chomp.capitalize
+    #Return out of method new game
     return game21 = Games.new(name, genre, brief)
 end
+
+
 
