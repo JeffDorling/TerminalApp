@@ -25,7 +25,7 @@ end
 #Welcome Message Method
 def welcome_message
     outline = "="
-    welcome = "Jhye and Jeff's Fantastic Game Recommendations"
+    welcome = "Jhye and Jeff's Fantastic Game Recommendations".colorize(:red)
     puts"\e[2J\e[f"
     puts outline * welcome.length
     puts welcome
@@ -34,12 +34,12 @@ end
 
 #List of Options Method
 def options
-    puts "(a) to add a game"
-    puts "(d) to delete a game"
-    puts "(g) to select list of games by genre"
-    puts "(r) for a random game suggestion"
-    puts "(f) for our full list of games"
-    puts "(q) to quit"
+    puts "(a)".colorize(:blue) + "to add a game"
+    puts "(d)".colorize(:blue) + "to delete a game"
+    puts "(g)".colorize(:blue) + "to select list of games by genre"
+    puts "(r)".colorize(:blue) + "for a random game suggestion"
+    puts "(f)".colorize(:blue) + "for our full list of games"
+    puts "(q)".colorize(:blue) + "to quit"
 end
 
 #Start menu, so we can loop back here 

@@ -2,6 +2,8 @@ Top 20 Game Recommendation App
 Created by Jhye O'meley & Jeff Dorling
 23/4/2019
 
+Github repository is located at https://github.com/JeffDorling/TerminalApp
+
 The following Ruby Gems required to run this program is:-
 -None. They will be implimented later :)
 

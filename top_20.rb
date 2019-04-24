@@ -5,6 +5,7 @@
 #Getting the game class
 require_relative "game_class"
 require 'io/console'
+require 'colorize'
 
 #Declared Variables 
 outline = "="
