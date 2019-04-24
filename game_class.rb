@@ -5,6 +5,8 @@
 
 #The Games class. This is used to outline the Games Object. It has some basic attributes
 #Keeps the Games objects consistent and organised
+# require_relative "top_20"
+
 class Games
 attr_reader :genre
     #Potential Rating system to include??
@@ -39,4 +41,28 @@ def options
     puts "(q) to quit"
 end
 
+#Start menu, so we can loop back here 
+def start_menu
+    puts "What would you like to do?"
+    end
+
+
+#Administration Method
+def admin
+    puts "Please enter your pincode"
+    pincode = gets.chomp
+        pincode == "1234" ?
+        true: false
+end
+
+#Game add 
+def game_add
+    puts "What was the name of the Game?"
+    name = gets.chomp.capitalize
+    puts "What genre does the game belong too?"
+    genre = gets.chomp.capitalize
+    puts "Write a quick brief of the game"
+    brief = gets.chomp.capitalize
+    return game21 = Games.new(name, genre, brief)
+end
 

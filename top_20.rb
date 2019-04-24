@@ -26,7 +26,7 @@ game11 = Games.new("Call of Duty: Black Ops" , "Action" , "INSERT DESC HERE")
 game12 = Games.new("Call of Duty: Black Ops 2" , "Action" , "INSERT DESC HERE")
 game13 = Games.new("Call of Duty: World at War" , "Action" , "INSERT DESC HERE")
 game14 = Games.new("Outlast" , "Horror" , "INSERT DESC HERE")
-game15 = Games.new("Outlast" , "Horror" , "INSERT DESC HERE")
+game15 = Games.new("Outlast 2" , "Horror" , "INSERT DESC HERE")
 game16 = Games.new("The Evil Within 2" , "Horror" , "INSERT DESC HERE")
 game17 = Games.new("Arma 3" , "Action" , "INSERT DESC HERE")
 game18 = Games.new("Squads" , "Action" , "INSERT DESC HERE")
@@ -46,8 +46,8 @@ enterinput = gets.chomp.downcase
 loop do
 if enterinput == "e"
    welcome_message
-   puts question
-   puts options  
+   start_menu
+   options  
 end
 
 userinput = gets.chomp.downcase
@@ -55,16 +55,18 @@ userinput = gets.chomp.downcase
 #The add option user input
 if userinput == "a"
     welcome_message
-    # puts "Confirm your an admin"
-    # puts "Please enter Pin Code"
-    # pincode = 1234
-    puts "This will add a game"
-    STDIN.getch
+    if admin == true
+        game_array.push(game_add)
+    end
+        STDIN.getch
 
 #The delete option for user input
     elsif userinput == "d"
         welcome_message
-        puts "This will delete a game"
+        admin
+        if admin == true
+            game_delete
+        end
         STDIN.getch
        
     elsif userinput == "g"
