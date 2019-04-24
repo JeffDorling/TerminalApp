@@ -67,31 +67,38 @@ if userinput == "a"
             puts "What are you going to delete"
             game_delete = gets.chomp.downcase
             delete_result = game_array.select {|game| game.name.downcase.include?(game_delete)}
-            puts "You deleted #{delete_result}?"
-            game_array.delete(delete_result) 
+            puts "You deleted #{delete_result.to_s}?"
+            game_array.delete(delete_result.first)
         end
         STDIN.getch
-       
+#The Genre search function, requiring user input to search for games via genre       
     elsif userinput == "g"
         welcome_message
-        puts "What Genre are you searching for?"
+        puts "Please type what genre you would like to search for?
+        -Horror
+        -Action
+        -RPG
+        -Real Time Strategy
+        -Survival"
         genre_search = gets.chomp.downcase
         genre_results = game_array.select {|game| game.genre.downcase.include?(genre_search)}
         puts genre_results
         STDIN.getch 
         
-
+#A random game recommendation. It just grabs a random game from the list and prints it out
     elsif userinput == "r"
         welcome_message
         puts "We recommend #{game_array.sample}"
         STDIN.getch
 
+#A print function that shows our full list of games 
     elsif userinput == "f"
         welcome_message
         puts "Our List "
         puts game_array
         STDIN.getch
 
+#Quits the App and breaks the ongoing loop 
     else userinput == "q"
         welcome_message
         puts "Thanks for coming. See you next time"
