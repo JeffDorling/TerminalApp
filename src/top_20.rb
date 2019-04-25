@@ -65,7 +65,11 @@ if userinput == "a"
     end
         
 
-#The delete option for user input
+#The delete option for user input. unfortunately this method while effective, has some issues.
+#This Delete functions, grabs and array and deletes the first from the array. 
+#Due to time constraints, this wasn't remedied, however if multiple games are in that array, 
+#this code might have unwanted results. Typing exact game names, avoids this but a long term solution
+#would be to adjust how this functions.
     elsif userinput == "d"
         welcome_message
         if admin == true

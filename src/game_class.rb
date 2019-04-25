@@ -58,6 +58,7 @@ end
 #Add a game to the current list function  
 def game_add
     #Get the name of the Game
+    puts "You are adding a Game"
     puts "What was the name of the Game?"
     name = gets.chomp.capitalize
     #Put this game in a genre to search for
