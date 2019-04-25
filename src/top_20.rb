@@ -2,17 +2,17 @@
 #Created by Jhye O'meley & Jeff Dorling
 #23/4/2019
 
-#Getting the game class
+#Getting the game class and ruby gems. Also for cleaner use, utilised io/console
 require_relative "game_class"
 require 'io/console'
 require 'colorize'
 
-#Declared Variables 
+#Declared Variables to save repeating use
 outline = "="
 question = "What would you like to do?"
 game_array = []
 
-#Our List of 20 Games 
+#Our List of 20 Games, declared here. Later iterations would be included in a yaml file
 game1 = Games.new("Battlezone 1998", "Real Time Strategy", "A cold war themed battle in space")
 game2 = Games.new("Dead Space", "Horror", "Repair mission in space that goes horribly wrong")
 game3 = Games.new("Mass Effect 2", "RPG", "Recruit a Crew to embark on a suicide mission")
@@ -44,6 +44,8 @@ puts "Press
 (e) to Enter"
 enterinput = gets.chomp.downcase
 
+#This begins the main menu loop. Safe guarded from unsure input by making the application loop back here.
+#The methods are found in the game_class and they are used frequently so to make the code dry. 
 loop do
 if enterinput == "e"
    welcome_message
@@ -58,6 +60,7 @@ if userinput == "a"
     welcome_message
     if admin == true
         game_array.push(game_add)      
+      else puts "Invalid Pin, returning to menu"
         STDIN.getch
     end
         
@@ -71,6 +74,7 @@ if userinput == "a"
             delete_result = game_array.select {|game| game.name.downcase.include?(game_delete)}
             puts "You deleted #{delete_result.to_s}?"
             game_array.delete(delete_result.first)
+        else puts "Invalid Pin, returning to menu"
             STDIN.getch
         end
         
@@ -83,6 +87,8 @@ if userinput == "a"
         -RPG
         -Real Time Strategy
         -Survival"
+#At the moment, the user will need to type the exact genre (not case sensitive) future iterations would
+#include drop down menu. For now, the current Genres we have available are displayed. 
         genre_search = gets.chomp.downcase
         genre_results = game_array.select {|game| game.genre.downcase.include?(genre_search)}
         puts genre_results
@@ -102,11 +108,15 @@ if userinput == "a"
         STDIN.getch
 
 #Quits the App and breaks the ongoing loop 
-    else userinput == "q"
+    elsif userinput == "q"
         welcome_message
         puts "Thanks for coming. See you next time"
         STDIN.getch
         break
+    else 
+        welcome_message
+        puts "Not a valid option"
+        STDIN.getch
     end   
 end
 

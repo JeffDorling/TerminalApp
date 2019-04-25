@@ -5,11 +5,10 @@
 
 #The Games class. This is used to outline the Games Object. It has some basic attributes
 #Keeps the Games objects consistent and organised
-# require_relative "top_20"
-
 class Games
 attr_reader :genre, :name
-    #Potential Rating system to include??
+    #The initialize method. It includes name, genre and description which are the key points of the game.
+    #We would be able to expand on this in later iterations
     def initialize (name, genre, brief)
         @name = name
         @genre = genre
@@ -18,14 +17,14 @@ attr_reader :genre, :name
 
     #A string method to organise the returned value into a neat response
     def to_s
-        return " #{@name}, #{@genre}, #{@description}"
+        return " The Game is: #{@name}, It's genre is: #{@genre}, Brief: #{@description}"
     end
 end
 
 #Welcome Message Method
 def welcome_message
     outline = "="
-    welcome = "Jhye and Jeff's Fantastic Game Recommendations".colorize(:red)
+    welcome = "Jhye and Jeff's Fantastic Game Recommendations".colorize(:yellow)
     puts"\e[2J\e[f"
     puts outline * welcome.length
     puts welcome
