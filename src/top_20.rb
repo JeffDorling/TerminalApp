@@ -76,8 +76,10 @@ if userinput == "a"
             puts "What are you going to delete"
             game_delete = gets.chomp.downcase
             delete_result = game_array.select {|game| game.name.downcase.include?(game_delete)}
+            #This prints out the correct object, but ugly 
             puts "You deleted #{delete_result.to_s}?"
             game_array.delete(delete_result.first)
+            STDIN.getch
         else puts "Invalid Pin, returning to menu"
             STDIN.getch
         end
@@ -101,7 +103,8 @@ if userinput == "a"
 #A random game recommendation. It just grabs a random game from the list and prints it out
     elsif userinput == "r"
         welcome_message
-        puts "We recommend #{game_array.sample}"
+        puts "The Recommendation"
+        puts "#{game_array.sample}"
         STDIN.getch
 
 #A print function that shows our full list of games 
